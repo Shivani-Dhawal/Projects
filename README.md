@@ -3,7 +3,7 @@
                     Data - Available on kaggle
                     Code - Titanic.R
 2) Marketing analytics -
-                    Data File - Regression and MyData for finding top 20 % customers 
+                    Data File - ecomRegression and ecomData for finding top 20 % customers 
                     Code - ecommmerce.R
 
 3) Employee Attrition project - 
