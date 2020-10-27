@@ -7,5 +7,5 @@
                     Code - ecommmerce.R
 
 3) Employee Attrition project - 
-                    Data File - 
-                    Code - 
+                    Data File - HR Dataset
+                    Code - Employeeattrition.R
