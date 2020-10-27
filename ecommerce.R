@@ -1,7 +1,7 @@
 # MARKETING ANALYTICS for e-commerce
 
 rm(list = ls())
-data<- read.csv("D:/R/Regression.csv")
+data<- read.csv("ecomRegression.csv")
 View(data)
 summary(data) #to find NA's in the data;here there are 13 NA's in age variable.
 hist(data$Age)  #From Histogram ,we can see that data is normally distributed
@@ -117,15 +117,15 @@ cooked=CookD(model7)#since all obs are less than 0.02 level there are no outlier
 #next question is to identify the valueble customeers from the new list of 200 obs 
 #so that sales can focus more on top30% of valuable customers.
 #predicting the values on new data
-data2<-read.csv("D:/R/MyData.csv")
+data2<-read.csv("ecomData.csv")
 data2$Purchase.made<-predict.lm(model7,data2)#making changes in this file and filling the empty column of purchase made 
-write.csv(data2,file = "D:/R/ecommerce.csv")#making new csv file using this data ,sending this data outside r into file 
+write.csv(data2,file = "ecommerce.csv")#making new csv file using this data ,sending this data outside r into file 
 
 #sorting top 30% customers
 data3<-data2[order(-data2$Purchase.made),]
-write.csv(data3,file = "D:/R/ecommerce.csv")
+write.csv(data3,file = "ecommerce.csv")
 data4<-head(data3,60)#top 30%=60 obs are inserted in a file
-write.csv(data4,file = "D:/R/ecommerce.csv")
+write.csv(data4,file = "ecommerce.csv")
 
 #**********calculating the predictive power of the model************
 #function that returns root mean squared error
